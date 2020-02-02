@@ -1289,8 +1289,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
 
-    url_api: [];
+
+    var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../../../environments/environment */
+    "./src/environments/environment.ts");
 
     var ProductsService =
     /*#__PURE__*/
@@ -1304,27 +1308,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ProductsService, [{
         key: "getAllProducts",
         value: function getAllProducts() {
-          return this.http.get('https://platzi-store.herokuapp.com' + '/products');
+          return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].url_api + '/products');
         }
       }, {
         key: "getProduct",
         value: function getProduct(id) {
-          return this.http.get('https://platzi-store.herokuapp.com' + '/products/' + id);
+          return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].url_api + '/products/' + id);
         }
       }, {
         key: "createProduct",
         value: function createProduct(product) {
-          return this.http.post('https://platzi-store.herokuapp.com' + '/products', product);
+          return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].url_api + '/products', product);
         }
       }, {
         key: "updateProduct",
         value: function updateProduct(id, changes) {
-          return this.http.put('https://platzi-store.herokuapp.com' + '/products/' + id, changes);
+          return this.http.put(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].url_api + '/products/' + id, changes);
         }
       }, {
         key: "deleteProduct",
         value: function deleteProduct(id) {
-          return this.http.delete('https://platzi-store.herokuapp.com' + '/products/' + id);
+          return this.http.delete(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].url_api + '/products/' + id);
         }
       }]);
 
