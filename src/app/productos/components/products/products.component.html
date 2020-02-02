@@ -1,0 +1,10 @@
+
+<div class="product-grid">
+    <app-productos
+      *ngFor="let product of products"
+      (AddCartClick)="ClickProduct($event)"
+      [product]="product"
+    >
+    </app-productos>
+  </div>
+  

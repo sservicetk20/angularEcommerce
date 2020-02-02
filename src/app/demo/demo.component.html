@@ -1,0 +1,19 @@
+
+<input type="text" [(ngModel)]="title" />
+{{ title }}
+
+<input type="number" [(ngModel)]="power">
+
+<h2>{{power | exponential }}</h2>
+
+<li *ngFor="let name of items; index as i">
+  <a>{{ name }} -- {{ i }}</a>
+  <button (click)="deleteItem(i)">
+    Delete
+  </button>
+</li>
+
+<button (click)="AddItem()">
+  Add
+</button>
+
